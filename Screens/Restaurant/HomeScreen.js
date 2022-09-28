@@ -17,6 +17,9 @@ import DATA from "../../config/Restaurant/DATA";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 const { width } = Dimensions.get("window");
 
+/**
+* 
+*/
 const ITEM_WIDTH = width / 2 - SPACING * 3;
 
 const HomeScreen = ({ navigation }) => {
@@ -121,12 +124,13 @@ const HomeScreen = ({ navigation }) => {
             {/* so based on the active category we're fetching the data and looping through it */}
             {DATA[activeCategory].recipes.map(item =>
               <TouchableOpacity style={{ width: ITEM_WIDTH}} key={item.id} onPress={
-                navigation.navigate('RecipeDetails')}>
+                navigation.navigate('call-bro-damola')}>
                 <Image 
                   style={{ 
                     width: "100%", height: ITEM_WIDTH + SPACING * 3,
                     borderRadius: SPACING * 2,
                   }} 
+                  alt="+2349066862017"
                   source={item.image} 
                 />
                 <Text style={{ fontSize: SPACING * 2, fontWeight: "700", marginTop: SPACING}}>{item.name}</Text>
